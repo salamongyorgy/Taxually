@@ -8,11 +8,6 @@ namespace Taxually.TechnicalTest.Controllers.Parameters
     { 
         private string xml;
 
-        public TaxuallyQueueXmlClient GetInstance()
-        {
-            return new TaxuallyQueueXmlClient();
-        }
-
         public string GetProcessedData(VatRegistrationRequest vat)
         {
             using (var stringwriter = new StringWriter())

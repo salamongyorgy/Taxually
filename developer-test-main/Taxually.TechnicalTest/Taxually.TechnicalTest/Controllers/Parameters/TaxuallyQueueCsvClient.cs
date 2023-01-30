@@ -6,11 +6,6 @@ namespace Taxually.TechnicalTest.Controllers.Parameters
 {
     public class TaxuallyQueueCsvClient : TaxuallyQueueClient, ITaxuallyClient<byte[]>
     {
-        public TaxuallyQueueCsvClient GetInstance()
-        {
-            return new TaxuallyQueueCsvClient();
-        }
-
         public byte[] GetProcessedData(VatRegistrationRequest vat)
         {
             var csvBuilder = new StringBuilder();
