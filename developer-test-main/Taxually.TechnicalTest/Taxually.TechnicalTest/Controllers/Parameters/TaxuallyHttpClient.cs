@@ -3,7 +3,7 @@ using Taxually.TechnicalTest.Model;
 
 namespace Taxually.TechnicalTest.Controllers.Parameters
 {
-    public class TaxuallyHttpClient: BaseClient<VatRegistrationRequest>
+    public class TaxuallyHttpClient: TaxuallyAbbstractClient<VatRegistrationRequest>
     {
         public override VatRegistrationRequest GetProcessedData(VatRegistrationRequest vat)
         {

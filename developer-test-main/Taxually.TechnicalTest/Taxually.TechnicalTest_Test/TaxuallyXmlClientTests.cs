@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Taxually.TechnicalTest.Controllers;
 using Taxually.TechnicalTest.Controllers.Parameters;
 using Taxually.TechnicalTest.Model;
 
@@ -15,7 +16,7 @@ namespace Taxually.TechnicalTest_Test
         [Test]
         public void GetProcessedDataTest()
         {
-            var client = new TaxuallyQueueXmlClient();
+            var client = TaxuallyClientFactory.GetInstance<TaxuallyQueueXmlClient>();
             var company = new Company() { CompanyId = "TestId", CompanyName = "TestName" };
             var vat = new VatRegistrationRequest() { Company = company, Country = "country_test" };
 

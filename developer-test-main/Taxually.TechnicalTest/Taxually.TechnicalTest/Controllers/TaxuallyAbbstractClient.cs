@@ -3,9 +3,9 @@ using Taxually.TechnicalTest.Model;
 
 namespace Taxually.TechnicalTest.Controllers
 {
-    public abstract class BaseClient<TParam> :  ITaxuallyClient<TParam>
+    public abstract class TaxuallyAbbstractClient<T> :  ITaxuallyClient<T>
     {
-        public abstract TParam GetProcessedData(VatRegistrationRequest vat);
-        public abstract Task Process(string target, TParam parameter);
+        public abstract T GetProcessedData(VatRegistrationRequest vat);
+        public abstract Task Process(string target, T parameter);
     }
 }

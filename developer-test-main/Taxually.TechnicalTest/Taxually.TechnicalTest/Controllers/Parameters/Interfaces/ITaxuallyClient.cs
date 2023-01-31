@@ -2,10 +2,10 @@
 
 namespace Taxually.TechnicalTest.Controllers.Parameters.Interfaces
 {
-    public interface ITaxuallyClient<TParameter>
+    public interface ITaxuallyClient<T>
     {
-        Task Process(string target, TParameter parameter);
+        Task Process(string target, T parameter);
 
-        TParameter GetProcessedData(VatRegistrationRequest vat);
+        T GetProcessedData(VatRegistrationRequest vat);
     }
 }

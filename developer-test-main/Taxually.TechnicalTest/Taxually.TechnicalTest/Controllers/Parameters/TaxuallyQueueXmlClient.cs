@@ -6,7 +6,7 @@ namespace Taxually.TechnicalTest.Controllers.Parameters
 {
     public class TaxuallyQueueXmlClient : TaxuallyQueueClient, ITaxuallyClient<string>
     { 
-        private string xml;
+        private string xml = string.Empty;
 
         public string GetProcessedData(VatRegistrationRequest vat)
         {
